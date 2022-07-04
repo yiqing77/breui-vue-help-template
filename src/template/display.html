@@ -1,0 +1,90 @@
+<!--  
+  @name: breui-vue 进度
+  @prefix: bre-progress
+  @description: breui-vue 进度
+-->
+<bre-progress percent="${1}" size="${2| ,big|}" theme="${3|orange,green,cyan,blue,black,gray|" :show-text="${4|true,false|}" text="${5}"></bre-progress>
+<!--  
+  @name: breui-vue 时间线
+  @prefix: bre-timeline
+  @description: breui-vue 时间线
+-->
+<bre-timeline direction="${1|vertical,horizontal|}">
+  <bre-timeline-item title="${2}" ${3| ,simple|}>${4}</bre-timeline-item>
+</bre-timeline>
+<!--  
+  @name: breui-vue 折叠面板
+  @prefix: bre-collapse
+  @description: breui-vue 进度
+-->
+<bre-collapse v-model="${1}" ${2| ,accordion} change="${3}">
+  <bre-collapse-item title="${4}" id="${5}">
+     ${6}
+  </bre-collapse-item>
+</bre-collapse>
+<!--  
+  @name: breui-vue 表格
+  @prefix: bre-table
+  @description: breui-vue 进度
+-->
+<bre-table 
+  :columns="${1}" 
+  :data-source="${2}" 
+  v-model:selectedKeys="${3}"
+  checkbox="${4|true,false|}" 
+  default-toolbar="${5|true,false|}"
+  size="${6|lg,md,sm|}" 
+  :page="${7}" 
+  @change="${8}">
+</bre-table>
+<!--  
+  @name: breui-vue 头像
+  @prefix: bre-avatar
+  @description: breui-vue 进度
+-->
+<bre-avatar :src="${1}" size="${2|xs,sm,lg|}" ${3| ,radius|}></bre-avatar>
+<!--  
+  @name: breui-vue 空
+  @prefix:bre-empty
+  @description: breui-vue 进度
+-->
+<bre-empty description="${1}">
+  <template #${2|extra,image|}>
+    ${3}
+  </template>
+</bre-empty>
+<!--  
+  @name: breui-vue 分页
+  @prefix: bre-page
+  @description: breui-vue 进度
+-->
+<bre-page v-model="${1}" :limit="${2}" @limit="${3}" :total="${4}" :show-page="${5|true,false|}" :show-limit="${6|true,false|}"></bre-page>
+<!--  
+  @name: breui-vue 树
+  @prefix: bre-tree
+  @description: breui-vue 进度
+-->
+<bre-tree :data="${1}" v-model:checkedKeys="${2}" :showCheckbox="${3|true,false|}" ${4| ,collapse-transition|} @node-click="${5}">
+</bre-tree>
+<!--  
+  @name: breui-vue 穿梭框
+  @prefix: bre-transfer
+  @description: breui-vue 进度
+-->
+<bre-transfer :data-source="${1}" title="${2}" :show-search="${3|true,false|}"></bre-transfer>
+<!--  
+  @name: breui-vue 轮播
+  @prefix: bre-carousel
+  @description: breui-vue 进度
+-->
+<bre-carousel v-model="${1}" anim="${2| ,updown|}" indicator="${3|inside,outside,none|}" arrow="{4|hover,always,none|}" :autoplay="${5|true,false|}" interval="${6}">
+  <bre-carousel-item v-for="${7} in ${7}" :id="${7}.id">
+    <div>{{${7}.text }}</div>
+  </bre-carousel-item>
+</bre-carousel>
+<!--  
+  @name: breui-vue 数字滚动
+  @prefix: bre-count-up
+  @description: breui-vue 进度
+-->
+<bre-count-up :startVal="${1:0}" :endVal="${2}" :decimal-places="${3:0}" :use-grouping="${4|true,false|}" prefix="${5}" suffix="${6}"></bre-count-up>

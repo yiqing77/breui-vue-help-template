@@ -1,0 +1,58 @@
+<!--  
+  @name: breui-vue 弹层
+  @prefix: bre-layer
+  @description: breui-vue 弹层
+-->
+<bre-layer 
+  title="${1}" 
+  type="${2|page,iframe,drawer|}"
+  v-model="${3}" 
+  shade="${4|true,false|}" 
+  resize="${5|true,false|}" 
+  move="${6|true,false|}"
+  maxmin="${7|true,false|}"
+  >
+  ${7}
+</bre-layer>
+<!--  
+  @name: layer-vue 弹层 open()方法
+  @prefix: layer-open
+  @description: layer-vue 弹层 open()方法
+-->
+layer.open({
+  title: () => ${1},
+  content: () => ${2},
+  type: ${3|dialog,page,iframe,drawer,loading|},
+  shade: ${4|true,false|},
+  move: ${5|true,false|},
+  maxmin: ${6|true,false|},
+})
+<!--  
+  @name: breui-vue 弹层 load()方法
+  @prefix: layer-load
+  @description: layer-vue 弹层 open()方法, 16 加载按钮
+-->
+layer.load(${1|0,1,2|}, {time: ${2:1000}, ${3| ,icon:16|}})
+<!--  
+  @name: breui-vue 弹层 confirm()方法
+  @prefix: layer-confirm
+  @description: layer-vue 弹层 confirm()方法
+-->
+layer.confirm('${1}')
+<!--  
+  @name: breui-vue 弹层 msg()方法
+  @prefix: layer-msg
+  @description: layer-vue 弹层 msg()方法, 1 成功, 2 失败, 3 警告, 4 详情, 16 加载
+-->
+layer.msg("${1}", {icon:${2|1,2,3,4,16|}, time: ${3:1000} })
+<!--  
+  @name: breui-vue 弹层 drawer()方法
+  @prefix: layer-drawer
+  @description: layer-vue 弹层 drawer()方法
+-->
+layer.drawer({
+  title: () => ${1},
+  content: () => ${2},
+  offset: '${3|t,b,l,r|}',
+  area: ${4},
+})

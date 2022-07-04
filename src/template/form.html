@@ -1,0 +1,134 @@
+<!--  
+  @name: breui-vue 开关
+  @prefix:bre-switch
+  @description: ### breui-vue 开关
+-->
+<bre-switch 
+  v-model="${1}"
+  active-text="${2}"
+  inactive-text="${3}"
+  onswitch-value="${4}"
+  unswitch-value="${5}"
+  @change="${6}"
+>
+  <template #onswitch-icon>😄</template>
+  <template #unswitch-icon>🤔</template>
+</bre-switch>
+<!--  
+  @name: breui-vue 复选框
+  @prefix: bre-checkbox
+  @description: breui-vue 复选框
+-->
+<bre-checkbox name="${1:原生属性名}" v-model="${2}" skin="${3:primary}" label="${4}" @change="${5}" >${6:复选框名}</bre-checkbox>
+<!--  
+  @name: breui-vue 复选框组
+  @prefix: bre-checkbox-group
+  @description: breui-vue 复选框组
+-->
+<bre-checkbox-group v-model="${1}" @change="${2}">
+  <bre-checkbox name="${3}" skin="${4:primary}" label="${5}">${6}</bre-checkbox>
+</bre-checkbox-group>
+<!--  
+  @name: breui-vue 单选框
+  @prefix: bre-radio
+  @description: breui-vue 单选框
+-->
+<bre-radio v-model="${1}" name="${2}" label="${3}" @change="${4}">${5}</bre-radio>
+<!--  
+  @name: breui-vue 单选框组
+  @prefix: bre-radio-group
+  @description: breui-vue 单选框组
+-->
+<bre-radio-group name="${1}" v-model="${2}" @change="${3}">
+  <bre-radio label="${4}">${5}</bre-radio>
+</bre-radio-group>
+<!--  
+  @name: breui-vue 输入框
+  @prefix: bre-input
+  @description: breui-vue 输入框
+-->
+<bre-input v-model="${1}" allow-clear="${2|true,false|}"  placeholder="${3}" @${4|input,foucs,blur,change,clear|}="${5}"></bre-input>
+<!--  
+  @name: breui-vue 数字输入框
+  @prefix: bre-input-number
+  @description: breui-vue 数字输入框
+-->
+<bre-input-number v-model="${1}" size="${2|md,sm,xs|}" :min="${3}" :max="${4}" position="${5:right}" @change="${6}"></bre-input-number>
+<!--  
+  @name: breui-vue 文本域
+  @prefix: bre-textarea
+  @description: breui-vue 文本域
+-->
+<bre-textarea v-model="${1}" placeholder="${2}" @${3|input,foucs,blur|}="${4}"></bre-textarea>
+<!--  
+  @name: breui-vue 下拉选择框
+  @prefix: bre-select
+  @description: breui-vue 下拉选择框
+-->
+<bre-select v-model="${1}" @change="${2}">
+  <bre-select-option value="${3}" label="${4}"></bre-select-option>
+</bre-select>
+<!--  
+  @name: breui-vue 下拉选择框 option
+  @prefix: bre-select-option
+  @description: breui-vue 下拉选择框 option
+-->
+<bre-select-option value="${1}" label="${2}"></bre-select-option>
+<!--  
+  @name: breui-vue 颜色选择器
+  @prefix: bre-color-picker
+  @description: breui-vue 颜色选择器
+-->
+<bre-color-picker v-model="${1}" preset="${2}"></bre-color-picker>
+<!--  
+  @name: breui-vue 日期选择器
+  @prefix: bre-date-picker
+  @description: breui-vue 日期选择器
+-->
+<bre-date-picker v-model="${1}" type="${2|date,datetime,year,month,time,yearmonth|}" ${3| ,simple|}></bre-date-picker>
+<!--  
+  @name: breui-vue 上传
+  @prefix: bre-upload
+  @description: breui-vue 上传
+-->
+<bre-upload @done="${1}" @choose="${2}">
+  <template #preview>
+    ${3}
+  </template>
+</bre-upload>
+<!--  
+  @name: breui-vue 图标选择器
+  @prefix: bre-icon-picker
+  @description: breui-vue 图标选择器
+-->
+<bre-icon-picker v-model="${1}" type="${2:breui-icon-face-smile}" ${4| ,page|} ${5| ,show-search|}></bre-icon-picker>
+<!--  
+  @name: breui-vue 评分
+  @prefix: bre-rate
+  @description: breui-vue 评分
+-->
+<bre-rate v-model="${1}" :text="${2|true,false|}" :half="${3|true,false|}" :is-block="${4|true,false|}" theme="#1E9FFF"></bre-rate>
+<!--  
+  @name: breui-vue 滑块
+  @prefix: bre-slider
+  @description: breui-vue 滑块
+-->
+<bre-slider v-model="${1}" :showDots="${2|true,false|}" :step="${3:10}" :max="${4:100}"></bre-slider>
+<!--  
+  @name: breui-vue 表单
+  @prefix: bre-form
+  @description: breui-vue 表单
+-->
+<bre-form :model="${1}">
+  <bre-form-item label="${2}" prop="${3}">
+    <bre-input v-model="${1}."></bre-input>
+  </bre-form-item>
+</bre-form>
+<!--  
+  @name: breui-vue 表单 item
+  @prefix: bre-form-item
+  @description: breui-vue 表单 item
+-->
+<bre-form-item label="${1}" prop="${2}" :label-position="${3|left,top,right|}">
+${4}
+</bre-form-item>

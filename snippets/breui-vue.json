@@ -1,0 +1,727 @@
+{
+  "breui-vue徽章": {
+    "prefix": "bre-badge",
+    "body": [
+      "<bre-badge type=\"${1|dot,rim|}\" theme=\"${2|orange,green,cyan,blue,black,gray|}\" ${3| ,ripple|}></bre-badge>"
+    ],
+    "description": "breui-vue徽章"
+  },
+  "breui-vue引用": {
+    "prefix": "bre-quote",
+    "body": ["<bre-quote ${1| ,type=\"nm\"|}>${2}</bre-quote>"],
+    "description": "breui-vue引用"
+  },
+  "breui-vue分割线": {
+    "prefix": "bre-line",
+    "body": [
+      "<bre-line ",
+      "  direction=\"${1|horizontal,vertical|}\" ",
+      "  theme=\"${2|red,orange,green,cyan,blue,black,gray,#EEF08D|}\"",
+      "  content-position=\"${3|center,left,right|}\"",
+      "  border-style=\"${4|solid,dotted,dashed,double,groove,ridge,inset,outset|}\"",
+      "  >",
+      "  ${5}",
+      "</bre-line>"
+    ],
+    "description": "breui-vue分割线,border-style参见MDNhttps"
+  },
+  "breui-vue字段": {
+    "prefix": "bre-field",
+    "body": ["<bre-field title=\"${1}\">${2}</bre-field>"],
+    "description": "breui-vue字段"
+  },
+  "breui-vue文字提示": {
+    "prefix": "bre-tooltip",
+    "body": ["<bre-tooltip content=\"${1}\" position=\"${2|top,bottom,left,right|}\">", "    ${3}", "  </bre-tooltip>"],
+    "description": "breui-vue文字提示"
+  },
+  "breui-vue分步": {
+    "prefix": "bre-step",
+    "body": [
+      "<bre-step :active=\"${1}\" composition=\"${2|default,row|}\" direction=\"${3|horizontal,vertical|}\" on-change=\"${4}\">",
+      "  <bre-step-item title=\"${5}\" content=\"${6}\"></bre-step-item>",
+      "</bre-step>"
+    ],
+    "description": "breui-vue分步"
+  },
+  "breui-vue分步item": {
+    "prefix": "bre-step-item",
+    "body": [
+      "<bre-step-item title=\"${1}\" content=\"${2}\" status=\"${3|primary,success,fail,warning|}\"></bre-step-item>"
+    ],
+    "description": "breui-vue分步item"
+  },
+  "breui-vue分割面板": {
+    "prefix": "bre-split-panel",
+    "body": [
+      "<bre-split-panel vertical=\"${1|false,true|}\">",
+      "  <bre-split-panel-item :space=\"${2:30}\">1</bre-split-panel-item>",
+      "  <bre-split-panel-item :space=\"${3:30}\">2</bre-split-panel-item>",
+      "  <bre-split-panel-item :space=\"${4:40}\">3</bre-split-panel-item>",
+      "</bre-split-panel>"
+    ],
+    "description": "breui-vue分割面板,itemspace属性合计100"
+  },
+  "breui-vue异常": {
+    "prefix": "bre-exception",
+    "body": [
+      "<bre-exception status=\"${1|403,404,500|}\" title=\"${1}\" describe=\"${2:描述信息}\">",
+      "  <template #extra>",
+      "    <bre-button>刷新</bre-button>",
+      "    <bre-button type=\"primary\">返回</bre-button>",
+      "  </template>",
+      "</bre-exception>"
+    ],
+    "description": "breui-vue异常"
+  },
+  "breui-vue结果": {
+    "prefix": "bre-result",
+    "body": [
+      "<bre-result status=\"${1|success,failure|}\">",
+      "  <template #content>",
+      "    ${2:内容插槽}",
+      "  </template>",
+      "  <template #extra>",
+      "    <bre-button>返回首页</bre-button>",
+      "  </template>",
+      "</bre-result>"
+    ],
+    "description": "breui-vue结果"
+  },
+  "breui-vue虚拟滚动": {
+    "prefix": "bre-scroll",
+    "body": [
+      "<bre-scroll height=\"${1:200px}\" thumbWidth=\"${2}\" thumbColor=\"${3}\" trackColor=\"${4}\">",
+      " ${5}",
+      "</bre-scroll>"
+    ],
+    "description": "breui-vue虚拟滚动"
+  },
+  "breui-vue通告栏": {
+    "prefix": "bre-notice-bar",
+    "body": [
+      "<bre-notice-bar text=\"${1}\" mode=\"${2|link,closeable|}\" leftIcon=\"breui-icon-mute\" rightIcon=\"breui-icon-close\"></bre-notice-bar>"
+    ],
+    "description": "breui-vue通告栏"
+  },
+  "breui-vue按钮": {
+    "prefix": "bre-button",
+    "body": ["<bre-button type=\"${1|primary,normal,warm,danger|}\" size=\"${2|lg,sm,xs|}\">$3</bre-button>", "$4"],
+    "description": "breuiVue<bre-button>"
+  },
+  "breui-vue按钮组": {
+    "prefix": "bre-button-group",
+    "body": [
+      "<bre-button-group>",
+      "  <bre-button type=\"${1|primary,normal,warm,danger|}\" size=\"${2|lg,sm,xs|}\">$3</bre-button>",
+      "  <bre-button type=\"${4|primary,normal,warm,danger|}\" size=\"${5|lg,sm,xs|}\">$6</bre-button>",
+      "</bre-button-group>",
+      "$7"
+    ],
+    "description": "breui-vue按钮组"
+  },
+  "breui-vue按钮容器": {
+    "prefix": "bre-button-container",
+    "body": [
+      "<bre-button-container>",
+      "  <bre-button type=\"${1|primary,normal,warm,danger|}\" size=\"${2|lg,sm,xs|}\">$3</bre-button>",
+      "  <bre-button type=\"${4|primary,normal,warm,danger|}\" size=\"${5|lg,sm,xs|}\">$6</bre-button>",
+      "</bre-button-container>",
+      "$7"
+    ],
+    "description": "breui-vue按钮容器,按扭之间自动添加间距"
+  },
+  "breui-vue图标": {
+    "prefix": "bre-icon",
+    "body": ["<bre-icon type=\"${1}\" color=\"${2|red,orange,green,cyan,blue,black|}\"></bre-icon>", "$3"],
+    "description": "breui-vue图标"
+  },
+  "breui-vue过渡": {
+    "prefix": "bre-transition",
+    "body": ["<bre-transition type=\"${1|collapse,fade|}\">$2</bre-transition>"],
+    "description": "breui-vue过渡"
+  },
+  "breui-vue全屏": {
+    "prefix": "bre-fullscreen",
+    "body": [
+      "<bre-fullscreen v-slot=\"{ enter, exit, toggle, isFullscreen }\" @fullscreenchange=\"${1}\">",
+      "  <bre-button @click=\"toggle()\">{{isFullscreen ? \"退出\" : \"进入全屏\"}}</bre-button>",
+      "</bre-fullscreen>"
+    ],
+    "description": "breui-vue全屏"
+  },
+  "breui-vue水波纹": {
+    "prefix": "bre-ripple",
+    "body": ["<bre-ripple type=\"${1|inset,out|}\" trigger=\"${2|click,always,mouseenter|}\">", "$3", "</bre-ripple>"],
+    "description": "breui-vue水波纹"
+  },
+  "breui-vue进度": {
+    "prefix": "bre-progress",
+    "body": [
+      "<bre-progress percent=\"${1}\" size=\"${2| ,big|}\" theme=\"${3|orange,green,cyan,blue,black,gray|\" :show-text=\"${4|true,false|}\" text=\"${5}\"></bre-progress>"
+    ],
+    "description": "breui-vue进度"
+  },
+  "breui-vue时间线": {
+    "prefix": "bre-timeline",
+    "body": [
+      "<bre-timeline direction=\"${1|vertical,horizontal|}\">",
+      "  <bre-timeline-item title=\"${2}\" ${3| ,simple|}>${4}</bre-timeline-item>",
+      "</bre-timeline>"
+    ],
+    "description": "breui-vue时间线"
+  },
+  "breui-vue折叠面板": {
+    "prefix": "bre-collapse",
+    "body": [
+      "<bre-collapse v-model=\"${1}\" ${2| ,accordion} change=\"${3}\">",
+      "  <bre-collapse-item title=\"${4}\" id=\"${5}\">",
+      "     ${6}",
+      "  </bre-collapse-item>",
+      "</bre-collapse>"
+    ],
+    "description": "breui-vue进度"
+  },
+  "breui-vue表格": {
+    "prefix": "bre-table",
+    "body": [
+      "<bre-table ",
+      "  :columns=\"${1}\" ",
+      "  :data-source=\"${2}\" ",
+      "  v-model:selectedKeys=\"${3}\"",
+      "  checkbox=\"${4|true,false|}\" ",
+      "  default-toolbar=\"${5|true,false|}\"",
+      "  size=\"${6|lg,md,sm|}\" ",
+      "  :page=\"${7}\" ",
+      "  @change=\"${8}\">",
+      "</bre-table>"
+    ],
+    "description": "breui-vue进度"
+  },
+  "breui-vue头像": {
+    "prefix": "bre-avatar",
+    "body": ["<bre-avatar :src=\"${1}\" size=\"${2|xs,sm,lg|}\" ${3| ,radius|}></bre-avatar>"],
+    "description": "breui-vue进度"
+  },
+  "breui-vue空": {
+    "prefix": "bre-empty",
+    "body": [
+      "<bre-empty description=\"${1}\">",
+      "  <template #${2|extra,image|}>",
+      "    ${3}",
+      "  </template>",
+      "</bre-empty>"
+    ],
+    "description": "breui-vue进度"
+  },
+  "breui-vue分页": {
+    "prefix": "bre-page",
+    "body": [
+      "<bre-page v-model=\"${1}\" :limit=\"${2}\" @limit=\"${3}\" :total=\"${4}\" :show-page=\"${5|true,false|}\" :show-limit=\"${6|true,false|}\"></bre-page>"
+    ],
+    "description": "breui-vue进度"
+  },
+  "breui-vue树": {
+    "prefix": "bre-tree",
+    "body": [
+      "<bre-tree :data=\"${1}\" v-model:checkedKeys=\"${2}\" :showCheckbox=\"${3|true,false|}\" ${4| ,collapse-transition|} @node-click=\"${5}\">",
+      "</bre-tree>"
+    ],
+    "description": "breui-vue进度"
+  },
+  "breui-vue穿梭框": {
+    "prefix": "bre-transfer",
+    "body": ["<bre-transfer :data-source=\"${1}\" title=\"${2}\" :show-search=\"${3|true,false|}\"></bre-transfer>"],
+    "description": "breui-vue进度"
+  },
+  "breui-vue轮播": {
+    "prefix": "bre-carousel",
+    "body": [
+      "<bre-carousel v-model=\"${1}\" anim=\"${2| ,updown|}\" indicator=\"${3|inside,outside,none|}\" arrow=\"{4|hover,always,none|}\" :autoplay=\"${5|true,false|}\" interval=\"${6}\">",
+      "  <bre-carousel-item v-for=\"${7} in ${7}\" :id=\"${7}.id\">",
+      "    <div>{{${7}.text }}</div>",
+      "  </bre-carousel-item>",
+      "</bre-carousel>"
+    ],
+    "description": "breui-vue进度"
+  },
+  "breui-vue数字滚动": {
+    "prefix": "bre-count-up",
+    "body": [
+      "<bre-count-up :startVal=\"${1:0}\" :endVal=\"${2}\" :decimal-places=\"${3:0}\" :use-grouping=\"${4|true,false|}\" prefix=\"${5}\" suffix=\"${6}\"></bre-count-up>"
+    ],
+    "description": "breui-vue进度"
+  },
+  "breui-vue开关": {
+    "prefix": "bre-switch",
+    "body": [
+      "<bre-switch ",
+      "  v-model=\"${1}\"",
+      "  active-text=\"${2}\"",
+      "  inactive-text=\"${3}\"",
+      "  onswitch-value=\"${4}\"",
+      "  unswitch-value=\"${5}\"",
+      "  @change=\"${6}\"",
+      ">",
+      "  <template #onswitch-icon>😄</template>",
+      "  <template #unswitch-icon>🤔</template>",
+      "</bre-switch>"
+    ],
+    "description": "###breui-vue开关"
+  },
+  "breui-vue复选框": {
+    "prefix": "bre-checkbox",
+    "body": [
+      "<bre-checkbox name=\"${1:原生属性名}\" v-model=\"${2}\" skin=\"${3:primary}\" label=\"${4}\" @change=\"${5}\" >${6:复选框名}</bre-checkbox>"
+    ],
+    "description": "breui-vue复选框"
+  },
+  "breui-vue复选框组": {
+    "prefix": "bre-checkbox-group",
+    "body": [
+      "<bre-checkbox-group v-model=\"${1}\" @change=\"${2}\">",
+      "  <bre-checkbox name=\"${3}\" skin=\"${4:primary}\" label=\"${5}\">${6}</bre-checkbox>",
+      "</bre-checkbox-group>"
+    ],
+    "description": "breui-vue复选框组"
+  },
+  "breui-vue单选框": {
+    "prefix": "bre-radio",
+    "body": ["<bre-radio v-model=\"${1}\" name=\"${2}\" label=\"${3}\" @change=\"${4}\">${5}</bre-radio>"],
+    "description": "breui-vue单选框"
+  },
+  "breui-vue单选框组": {
+    "prefix": "bre-radio-group",
+    "body": [
+      "<bre-radio-group name=\"${1}\" v-model=\"${2}\" @change=\"${3}\">",
+      "  <bre-radio label=\"${4}\">${5}</bre-radio>",
+      "</bre-radio-group>"
+    ],
+    "description": "breui-vue单选框组"
+  },
+  "breui-vue输入框": {
+    "prefix": "bre-input",
+    "body": [
+      "<bre-input v-model=\"${1}\" allow-clear=\"${2|true,false|}\"  placeholder=\"${3}\" @${4|input,foucs,blur,change,clear|}=\"${5}\"></bre-input>"
+    ],
+    "description": "breui-vue输入框"
+  },
+  "breui-vue数字输入框": {
+    "prefix": "bre-input-number",
+    "body": [
+      "<bre-input-number v-model=\"${1}\" size=\"${2|md,sm,xs|}\" :min=\"${3}\" :max=\"${4}\" position=\"${5:right}\" @change=\"${6}\"></bre-input-number>"
+    ],
+    "description": "breui-vue数字输入框"
+  },
+  "breui-vue文本域": {
+    "prefix": "bre-textarea",
+    "body": ["<bre-textarea v-model=\"${1}\" placeholder=\"${2}\" @${3|input,foucs,blur|}=\"${4}\"></bre-textarea>"],
+    "description": "breui-vue文本域"
+  },
+  "breui-vue下拉选择框": {
+    "prefix": "bre-select",
+    "body": [
+      "<bre-select v-model=\"${1}\" @change=\"${2}\">",
+      "  <bre-select-option value=\"${3}\" label=\"${4}\"></bre-select-option>",
+      "</bre-select>"
+    ],
+    "description": "breui-vue下拉选择框"
+  },
+  "breui-vue下拉选择框option": {
+    "prefix": "bre-select-option",
+    "body": ["<bre-select-option value=\"${1}\" label=\"${2}\"></bre-select-option>"],
+    "description": "breui-vue下拉选择框option"
+  },
+  "breui-vue颜色选择器": {
+    "prefix": "bre-color-picker",
+    "body": ["<bre-color-picker v-model=\"${1}\" preset=\"${2}\"></bre-color-picker>"],
+    "description": "breui-vue颜色选择器"
+  },
+  "breui-vue日期选择器": {
+    "prefix": "bre-date-picker",
+    "body": [
+      "<bre-date-picker v-model=\"${1}\" type=\"${2|date,datetime,year,month,time,yearmonth|}\" ${3| ,simple|}></bre-date-picker>"
+    ],
+    "description": "breui-vue日期选择器"
+  },
+  "breui-vue上传": {
+    "prefix": "bre-upload",
+    "body": [
+      "<bre-upload @done=\"${1}\" @choose=\"${2}\">",
+      "  <template #preview>",
+      "    ${3}",
+      "  </template>",
+      "</bre-upload>"
+    ],
+    "description": "breui-vue上传"
+  },
+  "breui-vue图标选择器": {
+    "prefix": "bre-icon-picker",
+    "body": [
+      "<bre-icon-picker v-model=\"${1}\" type=\"${2:breui-icon-face-smile}\" ${4| ,page|} ${5| ,show-search|}></bre-icon-picker>"
+    ],
+    "description": "breui-vue图标选择器"
+  },
+  "breui-vue评分": {
+    "prefix": "bre-rate",
+    "body": [
+      "<bre-rate v-model=\"${1}\" :text=\"${2|true,false|}\" :half=\"${3|true,false|}\" :is-block=\"${4|true,false|}\" theme=\"#1E9FFF\"></bre-rate>"
+    ],
+    "description": "breui-vue评分"
+  },
+  "breui-vue滑块": {
+    "prefix": "bre-slider",
+    "body": [
+      "<bre-slider v-model=\"${1}\" :showDots=\"${2|true,false|}\" :step=\"${3:10}\" :max=\"${4:100}\"></bre-slider>"
+    ],
+    "description": "breui-vue滑块"
+  },
+  "breui-vue表单": {
+    "prefix": "bre-form",
+    "body": [
+      "<bre-form :model=\"${1}\">",
+      "  <bre-form-item label=\"${2}\" prop=\"${3}\">",
+      "    <bre-input v-model=\"${1}.\"></bre-input>",
+      "  </bre-form-item>",
+      "</bre-form>"
+    ],
+    "description": "breui-vue表单"
+  },
+  "breui-vue表单item": {
+    "prefix": "bre-form-item",
+    "body": [
+      "<bre-form-item label=\"${1}\" prop=\"${2}\" :label-position=\"${3|left,top,right|}\">",
+      "${4}",
+      "</bre-form-item>"
+    ],
+    "description": "breui-vue表单item"
+  },
+  "breui-vue弹层": {
+    "prefix": "bre-layer",
+    "body": [
+      "<bre-layer ",
+      "  title=\"${1}\" ",
+      "  type=\"${2|page,iframe,drawer|}\"",
+      "  v-model=\"${3}\" ",
+      "  shade=\"${4|true,false|}\" ",
+      "  resize=\"${5|true,false|}\" ",
+      "  move=\"${6|true,false|}\"",
+      "  maxmin=\"${7|true,false|}\"",
+      "  >",
+      "  ${7}",
+      "</bre-layer>"
+    ],
+    "description": "breui-vue弹层"
+  },
+  "layer-vue弹层open()方法": {
+    "prefix": "layer-open",
+    "body": [
+      "layer.open({",
+      "  title: () => ${1},",
+      "  content: () => ${2},",
+      "  type: ${3|dialog,page,iframe,drawer,loading|},",
+      "  shade: ${4|true,false|},",
+      "  move: ${5|true,false|},",
+      "  maxmin: ${6|true,false|},",
+      "})"
+    ],
+    "description": "layer-vue弹层open()方法"
+  },
+  "breui-vue弹层load()方法": {
+    "prefix": "layer-load",
+    "body": ["layer.load(${1|0,1,2|}, {time: ${2:1000}, ${3| ,icon:16|}})"],
+    "description": "layer-vue弹层open()方法,16加载按钮"
+  },
+  "breui-vue弹层confirm()方法": {
+    "prefix": "layer-confirm",
+    "body": ["layer.confirm('${1}')"],
+    "description": "layer-vue弹层confirm()方法"
+  },
+  "breui-vue弹层msg()方法": {
+    "prefix": "layer-msg",
+    "body": ["layer.msg(\"${1}\", {icon:${2|1,2,3,4,16|}, time: ${3:1000} })"],
+    "description": "layer-vue弹层msg()方法,1成功,2失败,3警告,4详情,16加载"
+  },
+  "breui-vue弹层drawer()方法": {
+    "prefix": "layer-drawer",
+    "body": [
+      "layer.drawer({",
+      "  title: () => ${1},",
+      "  content: () => ${2},",
+      "  offset: '${3|t,b,l,r|}',",
+      "  area: ${4},",
+      "})"
+    ],
+    "description": "layer-vue弹层drawer()方法"
+  },
+  "breui-vue容器": {
+    "prefix": "bre-container",
+    "body": ["<bre-container ${1:fluid}>", " ${2}", "</bre-container>"],
+    "description": "breui-vue容器"
+  },
+  "breui-vue栅格row": {
+    "prefix": "bre-row",
+    "body": [
+      "<bre-row space=\"${1}\">",
+      "  <bre-col xs=\"${2:3}\" sm=\"${3:6}\" md=\"${4:12}\" lg=\"${5:24}\">",
+      "    ${6}",
+      "  </bre-col>",
+      "</bre-row>"
+    ],
+    "description": "breui-vue栅格"
+  },
+  "breui-vue栅格col": {
+    "prefix": "bre-col",
+    "body": ["<bre-col xs=\"${1:3}\" sm=\"${2:6}\" md=\"${3:12}\" lg=\"${4:24}\"></bre-col>"],
+    "description": "breui-vue栅格"
+  },
+  "breui-vue面板": {
+    "prefix": "bre-panel",
+    "body": [
+      "<bre-panel shadow=\"${1|always,hover,never|}\">",
+      "  <div style=\"padding: 30px;\">面板</div>",
+      "</bre-panel>"
+    ],
+    "description": "breui-vue面板"
+  },
+  "breui-vue卡片": {
+    "prefix": "bre-card",
+    "body": [
+      "<bre-card title=\"${1}\" shadow=\"${2|always,hover,never|}\">",
+      "  <template v-slot:title>",
+      "    ${3}",
+      "  </template>",
+      "  <template v-slot:extra>",
+      "    ${4}",
+      "  </template>",
+      "  <template v-slot:body>",
+      "    ${5}",
+      "  </template>",
+      "</bre-card>"
+    ],
+    "description": "breui-vue卡片"
+  },
+  "breui-vue骨架屏": {
+    "prefix": "bre-skeleton",
+    "body": [
+      "<bre-skeleton type=\"${1|p,image|}\" :loading=\"${2|true,false|}\" :rows=\"${3}\" animated></bre-skeleton>"
+    ],
+    "description": "breui-vue骨架屏"
+  },
+  "breui-vue菜单": {
+    "prefix": "bre-menu",
+    "body": [
+      "<bre-menu v-model:selectedKey=\"${1}\" v-model:openKeys=\"${2}\">",
+      "  <bre-menu-item id=\"1\">首页</bre-menu-item>",
+      "  <bre-sub-menu id=\"2\">",
+      "    <template #title>",
+      "      首页",
+      "    </template>",
+      "    <bre-menu-item id=\"3\">首页</bre-menu-item>",
+      "  </bre-sub-menu>",
+      "</bre-menu>"
+    ],
+    "description": "breui-vue菜单"
+  },
+  "breui-vue面包屑": {
+    "prefix": "bre-breadcrumb",
+    "body": [
+      "<bre-breadcrumb ${1| ,separator=\"\"|}>",
+      "  <bre-breadcrumb-item title=\"${2}\"></bre-breadcrumb-item>",
+      "  <bre-breadcrumb-item title=\"${3}\"></bre-breadcrumb-item>",
+      "</bre-breadcrumb>"
+    ],
+    "description": "breui-vue面包屑"
+  },
+  "breui-vue选项卡": {
+    "prefix": "bre-tab",
+    "body": [
+      "<bre-tab v-model=\"${1}\" type=\"${2| ,brief,card|}\" tab-position=\"${3|top,bottom,left,right|}\">",
+      "  <bre-tab-item title=\"${4:选项一}\" id=\"${5:1}\">",
+      "    ${6}",
+      "  </bre-tab-item>",
+      "</bre-tab>"
+    ],
+    "description": "breui-vue选项卡"
+  },
+  "breui-vue下拉菜单": {
+    "prefix": "bre-dropdown",
+    "body": [
+      "<bre-dropdown trigger=\"${1|click,hover,contextMenu|}\">",
+      "  <bre-button>下拉菜单</bre-button>",
+      "  <template #content>",
+      "    <bre-dropdown-menu>",
+      "      <bre-dropdown-menu-item>选项一</bre-dropdown-menu-item>",
+      "      <bre-dropdown-menu-item>选项二</bre-dropdown-menu-item>",
+      "    </bre-dropdown-menu>",
+      "  </template>",
+      "</bre-dropdown>"
+    ],
+    "description": "breui-vue下拉菜单"
+  },
+  "breui-vue返回顶部": {
+    "prefix": "bre-backtop",
+    "body": [
+      "<bre-backtop :show-height=\"${1:100}\" :bottom=\"${2:100}\" ${3:bgcolor=\"#5FB878\"} ${4| ,circle|}></bre-backtop>"
+    ],
+    "description": "breui-vue返回顶部"
+  },
+  "vue3CDN": {
+    "prefix": "v-cdn",
+    "body": ["${1|https://unpkg.com/,https://cdn.jsdelivr.net/npm/|}vue@3"],
+    "description": "vue3CDN"
+  },
+  "vue3CDN,ESM": {
+    "prefix": "v-cdn-es",
+    "body": ["${1|https://unpkg.com/,https://cdn.jsdelivr.net/npm/|}vue@3/dist/vue.esm-browser.js"],
+    "description": "vue3CDN,ES模块"
+  },
+  "breui-vueCDN": {
+    "prefix": "bre-cdn",
+    "body": ["${1|https://unpkg.com/,https://cdn.jsdelivr.net/npm/|}@breui/breui-vue"],
+    "description": "breui-vueCDN"
+  },
+  "breui-vueCDN,ESM": {
+    "prefix": "bre-cdn-es",
+    "body": ["${1|https://unpkg.com/,https://cdn.jsdelivr.net/npm/|}@breui/breui-vue/lib/index.js"],
+    "description": "breui-vueCDN,ES模块"
+  },
+  "breui-vueCDN,Css": {
+    "prefix": "bre-cdn-css",
+    "body": ["${1|https://unpkg.com/,https://cdn.jsdelivr.net/npm/|}@breui/breui-vue/lib/index.css"],
+    "description": "breui-vueCDN,Css"
+  },
+  "vuesetup传统模板": {
+    "prefix": "!v",
+    "body": [
+      "<template>",
+      "  ${1}",
+      "</template>",
+      "<script${2| , lang=\"ts\"|}>",
+      "  export default defineComponent({",
+      "    name: '${3}',",
+      "    setup() {",
+      "",
+      "      return { }",
+      "    }",
+      "  })",
+      "</script>",
+      "<style${4| , lang=\"less\", lang=\"scss\"|}${5| ,scoped|}>",
+      "",
+      "</style>"
+    ],
+    "description": "vuesetup传统模板,defineComponent"
+  },
+  "vuesetup语法糖模板": {
+    "prefix": "!vs",
+    "body": [
+      "<script${1| , lang=\"ts\" |} setup>",
+      "",
+      "</script>",
+      "<template>",
+      "  ${4}",
+      "</template>",
+      "<style${2| , lang=\"less\" , lang=\"scss\"|}${3| ,scoped|}>",
+      "",
+      "</style>"
+    ],
+    "description": "vuesetup传统模板,defineComponent"
+  },
+  "breui-vue-html模板": {
+    "prefix": "!bre-html",
+    "body": [
+      "<!DOCTYPE html>",
+      "<html lang=\"en\">",
+      "",
+      "<head>",
+      "  <title>Document</title>",
+      "  <meta charset=\"UTF-8\">",
+      "  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">",
+      "  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+      "  <link rel=\"stylesheet\" type=\"text/css\" href=\"${1|https://unpkg.com/@breui/breui-vue/lib/index.css, |}\">",
+      "  <script src=\"${2|https://unpkg.com/vue@3, |}\"></script>",
+      "  <script src=\"${3|https://unpkg.com/@breui/breui-vue, |}\"></script>",
+      "</head>",
+      "",
+      "<body>",
+      "  <div id=\"app\">",
+      "    <bre-button @click=\"openLayer\">Hello</bre-button>",
+      "  </div>",
+      "</body>",
+      "<script>",
+      "  const { createApp, ref } = Vue",
+      "  const { layer } = breuiVue",
+      "",
+      "  const App = {",
+      "    setup() {",
+      "      const openLayer = function () {",
+      "        layer.msg(\"hello\")",
+      "      }",
+      "      return {",
+      "        openLayer",
+      "      }",
+      "    }",
+      "  };",
+      "",
+      "  const app = createApp(App)",
+      "  app.use(breuiVue)",
+      "  app.mount('#app')",
+      "</script>",
+      "",
+      "</html>"
+    ],
+    "description": "breui-vue-html模板"
+  },
+  "breui-vue-html-es模板": {
+    "prefix": "!bre-html-es",
+    "body": [
+      "<!DOCTYPE html>",
+      "<html lang=\"en\">",
+      "",
+      "<head>",
+      "  <meta charset=\"UTF-8\">",
+      "  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">",
+      "  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+      "  <link rel=\"stylesheet\" type=\"text/css\" href=\"${1|https://unpkg.com/@breui/breui-vue/lib/index.css, |}\">",
+      "  <script type=\"importmap\">",
+      "    {",
+      "      \"imports\": {",
+      "        \"vue\": \"${2|https://unpkg.com/vue@3/dist/vue.esm-browser.js, |}\",",
+      "        \"breui\": \"${3|https://unpkg.com/@breui/breui-vue/lib/index.js, |}\"",
+      "      }",
+      "    }",
+      "  </script>",
+      "  <title>Document</title>",
+      "</head>",
+      "",
+      "<body>",
+      "  <div id=\"app\">",
+      "    <bre-button @click=\"say\">Hello</bre-button>",
+      "  </div>",
+      "  <script type=\"module\">",
+      "    import { createApp } from 'vue'",
+      "    import breui from 'breui'",
+      "",
+      "    const App = {",
+      "      data() {",
+      "        return {",
+      "          message: 'Hello Vue!'",
+      "        }",
+      "      },",
+      "      methods: {",
+      "        say() {",
+      "          this.\\$layer.msg(\"hello\")",
+      "        }",
+      "      },",
+      "    }",
+      "    const app = createApp(App)",
+      "    app.use(breui)",
+      "    app.mount('#app')",
+      "  </script>",
+      "</body>",
+      "",
+      "</html>"
+    ],
+    "description": "breui-vue-html-es模板,目前只有基于Chromium的浏览器支持导入映射表，如果使用了Firefox浏览器，则该功能仅在102+版本中受支持，且目前需要启用about,config中的dom.importMaps.enabled选项。如果更偏爱那些还不支持导入映射表的浏览器，你可以使用es-module-shims来进行polyfill,https//github.com/guybedford/es-module-shims"
+  }
+}

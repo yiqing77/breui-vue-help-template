@@ -1,0 +1,53 @@
+<!--  
+  @name: breui-vue 菜单
+  @prefix:bre-menu
+  @description: breui-vue 菜单
+-->
+<bre-menu v-model:selectedKey="${1}" v-model:openKeys="${2}">
+  <bre-menu-item id="1">首页</bre-menu-item>
+  <bre-sub-menu id="2">
+    <template #title>
+      首页
+    </template>
+    <bre-menu-item id="3">首页</bre-menu-item>
+  </bre-sub-menu>
+</bre-menu>
+<!--  
+  @name: breui-vue 面包屑
+  @prefix:bre-breadcrumb
+  @description: breui-vue 面包屑
+-->
+<bre-breadcrumb ${1| ,separator=""|}>
+  <bre-breadcrumb-item title="${2}"></bre-breadcrumb-item>
+  <bre-breadcrumb-item title="${3}"></bre-breadcrumb-item>
+</bre-breadcrumb>
+<!--  
+  @name: breui-vue 选项卡
+  @prefix:bre-tab
+  @description: breui-vue 选项卡
+-->
+<bre-tab v-model="${1}" type="${2| ,brief,card|}" tab-position="${3|top,bottom,left,right|}">
+  <bre-tab-item title="${4:选项一}" id="${5:1}">
+    ${6}
+  </bre-tab-item>
+</bre-tab>
+<!--  
+  @name: breui-vue 下拉菜单
+  @prefix:bre-dropdown
+  @description: breui-vue 下拉菜单
+-->
+<bre-dropdown trigger="${1|click,hover,contextMenu|}">
+  <bre-button>下拉菜单</bre-button>
+  <template #content>
+    <bre-dropdown-menu>
+      <bre-dropdown-menu-item>选项一</bre-dropdown-menu-item>
+      <bre-dropdown-menu-item>选项二</bre-dropdown-menu-item>
+    </bre-dropdown-menu>
+  </template>
+</bre-dropdown>
+<!--  
+  @name: breui-vue 返回顶部
+  @prefix:bre-backtop
+  @description: breui-vue 返回顶部
+-->
+<bre-backtop :show-height="${1:100}" :bottom="${2:100}" ${3:bgcolor="#5FB878"} ${4| ,circle|}></bre-backtop>

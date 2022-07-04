@@ -1,0 +1,95 @@
+{
+  "name": "breui-vue-helper",
+  "displayName": "breui-vue-helper",
+  "description": "breui-vue 辅助插件",
+  "version": "1.0.0",
+  "license": "MIT",
+  "publisher": "gaojianfei",
+  "author": {
+    "name": "gaojianfei"
+  },
+  "icon": "breui.png",
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/starsatdawn/breui-vue-helper.git"
+  },
+  "engines": {
+    "vscode": "^1.64.0"
+  },
+  "categories": [
+    "Snippets",
+    "Other"
+  ],
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "build": "vsce package",
+    "publish": "vsce publish",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "genSnippet": "node ./out/script/breui-vue-snippets-build.js ./src/template",
+    "genDoc": "node ./src/script/breui-vue-doc-build.js ./src/document/zh-CN"
+  },
+  "activationEvents": [
+    "onLanguage:vue",
+    "onLanguage:html",
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onLanguage:markdown"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "typescript",
+        "path": "./snippets/breui-vue.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/breui-vue.json"
+      },
+      {
+        "language": "html",
+        "path": "./snippets/breui-vue.json"
+      },
+      {
+        "language": "vue",
+        "path": "./snippets/breui-vue.json"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "breui Vue Helper Config",
+      "properties": {
+        "breui-vue-helper.language": {
+          "type": "string",
+          "default": "zh-CN",
+          "description": "Document Language of breui Vue",
+          "enum": [
+            "zh-CN",
+            "en-US"
+          ]
+        }
+      }
+    }
+  },
+  "devDependencies": {
+    "@types/common-tags": "^1.8.1",
+    "@types/glob": "^7.2.0",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "16.x",
+    "@types/vscode": "1.64.0",
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
+    "@vscode/test-electron": "^2.1.3",
+    "eslint": "^8.16.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.0.0",
+    "typescript": "^4.7.2",
+    "common-tags": "^1.8.2",
+    "vsce": "2.9.1"
+  },
+  "dependencies": {}
+}

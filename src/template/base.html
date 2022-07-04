@@ -1,0 +1,56 @@
+<!--  
+  @name: breui-vue 按钮
+  @prefix: bre-button
+  @description: breui Vue <bre-button>
+-->
+<bre-button type="${1|primary,normal,warm,danger|}" size="${2|lg,sm,xs|}">$3</bre-button>
+$4
+<!--  
+  @name: breui-vue 按钮组
+  @prefix: bre-button-group
+  @description: breui-vue 按钮组
+-->
+<bre-button-group>
+  <bre-button type="${1|primary,normal,warm,danger|}" size="${2|lg,sm,xs|}">$3</bre-button>
+  <bre-button type="${4|primary,normal,warm,danger|}" size="${5|lg,sm,xs|}">$6</bre-button>
+</bre-button-group>
+$7
+<!--  
+  @name: breui-vue 按钮容器
+  @prefix: bre-button-container
+  @description: breui-vue 按钮容器,按扭之间自动添加间距
+-->
+<bre-button-container>
+  <bre-button type="${1|primary,normal,warm,danger|}" size="${2|lg,sm,xs|}">$3</bre-button>
+  <bre-button type="${4|primary,normal,warm,danger|}" size="${5|lg,sm,xs|}">$6</bre-button>
+</bre-button-container>
+$7
+<!--  
+  @name: breui-vue 图标
+  @prefix: bre-icon
+  @description: breui-vue 图标
+-->
+<bre-icon type="${1}" color="${2|red,orange,green,cyan,blue,black|}"></bre-icon>
+$3
+<!--  
+  @name: breui-vue 过渡
+  @prefix: bre-transition
+  @description: breui-vue 过渡
+-->
+<bre-transition type="${1|collapse,fade|}">$2</bre-transition>
+<!--  
+  @name: breui-vue 全屏
+  @prefix: bre-fullscreen
+  @description: breui-vue 全屏
+-->
+<bre-fullscreen v-slot="{ enter, exit, toggle, isFullscreen }" @fullscreenchange="${1}">
+  <bre-button @click="toggle()">{{isFullscreen ? "退出" : "进入全屏"}}</bre-button>
+</bre-fullscreen>
+<!--  
+  @name: breui-vue 水波纹
+  @prefix: bre-ripple
+  @description: breui-vue 水波纹
+-->
+<bre-ripple type="${1|inset,out|}" trigger="${2|click,always,mouseenter|}">
+$3
+</bre-ripple>

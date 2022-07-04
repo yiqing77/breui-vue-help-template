@@ -1,0 +1,163 @@
+<!--  
+  @name: vue 3 CDN
+  @prefix:v-cdn
+  @description: vue 3 CDN
+-->
+${1|https://unpkg.com/,https://cdn.jsdelivr.net/npm/|}vue@3
+<!--  
+  @name: vue 3 CDN, ESM
+  @prefix:v-cdn-es
+  @description: vue 3 CDN, ES 模块
+-->
+${1|https://unpkg.com/,https://cdn.jsdelivr.net/npm/|}vue@3/dist/vue.esm-browser.js
+<!--  
+  @name: breui-vue CDN
+  @prefix:bre-cdn
+  @description: breui-vue CDN
+-->
+${1|https://unpkg.com/,https://cdn.jsdelivr.net/npm/|}@breui/breui-vue
+<!--  
+  @name: breui-vue CDN,ESM
+  @prefix:bre-cdn-es
+  @description:  breui-vue CDN,ES 模块
+-->
+${1|https://unpkg.com/,https://cdn.jsdelivr.net/npm/|}@breui/breui-vue/lib/index.js
+<!--  
+  @name: breui-vue CDN, Css
+  @prefix:bre-cdn-css
+  @description: breui-vue CDN,Css
+-->
+${1|https://unpkg.com/,https://cdn.jsdelivr.net/npm/|}@breui/breui-vue/lib/index.css
+<!--  
+  @name: vue setup 传统模板
+  @prefix:!v
+  @description:  vue setup 传统模板, defineComponent
+-->
+<template>
+  ${1}
+</template>
+<script${2| , lang="ts"|}>
+  export default defineComponent({
+    name: '${3}',
+    setup() {
+
+      return { }
+    }
+  })
+</script>
+<style${4| , lang="less", lang="scss"|}${5| ,scoped|}>
+
+</style>
+<!--  
+  @name: vue setup 语法糖模板
+  @prefix:!vs
+  @description:  vue setup 传统模板, defineComponent
+-->
+<script${1| , lang="ts" |} setup>
+
+</script>
+<template>
+  ${4}
+</template>
+<style${2| , lang="less" , lang="scss"|}${3| ,scoped|}>
+
+</style>
+<!--  
+  @name: breui-vue-html 模板
+  @prefix:!bre-html
+  @description:breui-vue-html 模板
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="${1|https://unpkg.com/@breui/breui-vue/lib/index.css, |}">
+  <script src="${2|https://unpkg.com/vue@3, |}"></script>
+  <script src="${3|https://unpkg.com/@breui/breui-vue, |}"></script>
+</head>
+
+<body>
+  <div id="app">
+    <bre-button @click="openLayer">Hello</bre-button>
+  </div>
+</body>
+<script>
+  const { createApp, ref } = Vue
+  const { layer } = breuiVue
+
+  const App = {
+    setup() {
+      const openLayer = function () {
+        layer.msg("hello")
+      }
+      return {
+        openLayer
+      }
+    }
+  };
+
+  const app = createApp(App)
+  app.use(breuiVue)
+  app.mount('#app')
+</script>
+
+</html>
+<!--  
+  @name: breui-vue-html-es 模板
+  @prefix:!bre-html-es
+  @description: breui-vue-html-es 模板, 目前只有基于 Chromium 的浏览器支持导入映射表，
+    如果使用了 Firefox 浏览器，则该功能仅在 102+ 版本中受支持，
+    且目前需要启用 about,config 中的 dom.importMaps.enabled 选项。
+    如果更偏爱那些还不支持导入映射表的浏览器，你可以使用 es-module-shims 来进行 polyfill,
+    https//github.com/guybedford/es-module-shims
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="${1|https://unpkg.com/@breui/breui-vue/lib/index.css, |}">
+  <script type="importmap">
+    {
+      "imports": {
+        "vue": "${2|https://unpkg.com/vue@3/dist/vue.esm-browser.js, |}",
+        "breui": "${3|https://unpkg.com/@breui/breui-vue/lib/index.js, |}"
+      }
+    }
+  </script>
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <bre-button @click="say">Hello</bre-button>
+  </div>
+  <script type="module">
+    import { createApp } from 'vue'
+    import breui from 'breui'
+
+    const App = {
+      data() {
+        return {
+          message: 'Hello Vue!'
+        }
+      },
+      methods: {
+        say() {
+          this.\$layer.msg("hello")
+        }
+      },
+    }
+    const app = createApp(App)
+    app.use(breui)
+    app.mount('#app')
+  </script>
+</body>
+
+</html>
