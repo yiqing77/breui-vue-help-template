@@ -11,7 +11,7 @@
   "icon": "breui.png",
   "repository": {
     "type": "git",
-    "url": "https://gitee.com/starsatdawn/breui-vue-helper.git"
+    "url": "https://github.com/yiqing77/breui-vue-help-template.git"
   },
   "engines": {
     "vscode": "^1.64.0"
