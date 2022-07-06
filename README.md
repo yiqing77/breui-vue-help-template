@@ -10,12 +10,10 @@ breui-vue-helper 是 breui Vue 的开发增强工具，提供代码片段，自�
 
 * 按 `Ctrl+Space` (Windows, Linux) 或 `Cmd+Space` (macOS) 查看自动补全列表，目前只支持属性和事件补全
 * 支持 Vue 和 HTML 文件
-![自动补全.gif](https://s2.loli.net/2022/06/20/LioZGshVlFQYyew.gif)
 
 ### 文档悬停提示
 
 * 移动光标到 breui-vue 的 tag 或 prop，显示悬浮文档。
-![悬浮提示.gif](https://s2.loli.net/2022/06/20/iKT3gn7bSxVFByX.gif)
 
 ## 问题反馈
 
